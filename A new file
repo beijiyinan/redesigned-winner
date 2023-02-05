@@ -1,0 +1,22 @@
+num = int(input("Enter a 4 digit number: "))
+ones = num % 10
+print ("Ones digit is", ones)
+tens = (num // 10) % 10 
+print ("Tens digit is", tens)
+hunds = (num % 1000) // 100
+print ("Hundreds digit is", hunds)
+thous = num // 1000
+print ("Thousands digit is", thous)
+rev = ones *1000 + tens *100 + thous * 1+ hunds * 10
+print ("Original number reversed is ", rev)
+
+dollars = int(input("Enter dollars: "))
+cents = int(input("Enter cents: "))
+quarters = int((dollars * 100+ cents) // 25)
+dimes = int((dollars * 100 + cents  - quarters * 25) // 10)
+nickels = int((dollars * 100 + cents - quarters * 25 - dimes * 10) // 5)
+pennies = int((dollars * 100 + cents  - quarters * 25 - dimes *10 - nickels * 5) // 1)
+print(quarters, "quarters")
+print(dimes, "dimes")
+print(nickels, "nickels")
+print(pennies, "pennies")
